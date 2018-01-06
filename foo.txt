@@ -11,3 +11,95 @@
  	create mode 100644 foo.txt
  	
  	返回内容中的3db6ccc即本次commit的散列值（提交的版本号）
+ 
+3.修改foo.txt的内容，删除bar.txt文件，添加一个bar.html文件
+	运行git status
+	显示：
+	On branch master
+	Changes not staged for commit:
+  	(use "git add/rm <file>..." to update what will be committed)
+ 	 (use "git checkout -- <file>..." to discard changes in working directory)
+
+	deleted:    bar.txt
+	modified:   foo.txt
+
+	Untracked files:
+ 	 (use "git add <file>..." to include in what will be committed)
+
+		.DS_Store
+		.idea/
+		bar.html
+
+	no changes added to commit (use "git add" and/or "git commit -a")
+	
+4.git diff 被修改过的文件
+	git diff foo.txt
+	
+	diff --git a/foo.txt b/foo.txt
+	index 443f8ef..3d6c952 100644
+	--- a/foo.txt
+	+++ b/foo.txt
+	@@ -3,4 +3,11 @@
+			Initialized empty Git repository in /Users/zhengjun/Desktop/GitProjects/first-steps/.git/
+	 2.提交项目文件foo.txt和bar.txt
+			 git add foo.txt bar.txt
+	-        
+	\ No newline at end of file
+	+        git commit --message "Sample project imported"
+	+        
+	+        [master (root-commit) 3db6ccc] Sample project imported
+	+       2 files changed, 7 insertions(+)
+	+       create mode 100644 bar.txt
+	+       create mode 100644 foo.txt
+	+       
+	+       返回内容中的3db6ccc即本次commit的散列值（提交的版本号）
+	\ No newline at end of file
+
+5.添加修改：所有改动、添加、删除都必须形成新的一次提交
+	git add foo.txt bar.html
+	git rm bar.txt
+	回显：rm 'bar.txt'
+	
+	操作完成后再次git status 所有修改已经被纳入下一次提交中
+	回显  On branch master
+			Changes to be committed:
+			  (use "git reset HEAD <file>..." to unstage)
+
+				new file:   .DS_Store
+				new file:   .idea/first-steps.iml
+				new file:   .idea/modules.xml
+				new file:   .idea/vcs.xml
+				new file:   .idea/workspace.xml
+				new file:   bar.html
+				deleted:    bar.txt
+				modified:   foo.txt
+
+6.提交修改
+	git commit --message "Some changes"
+	
+	提交后回显：
+		[master 91c78b1] Some changes
+		 8 files changed, 244 insertions(+), 2 deletions(-)
+		 create mode 100644 .DS_Store
+		 create mode 100644 .idea/first-steps.iml
+		 create mode 100644 .idea/modules.xml
+		 create mode 100644 .idea/vcs.xml
+		 create mode 100644 .idea/workspace.xml
+		 create mode 100644 bar.html
+		 delete mode 100644 bar.txt
+
+7.显示历史
+	git log
+	
+	回显：
+		commit 91c78b15b0652e5e38c74e0b952b931cb6fa816e (HEAD -> master)
+		Author: 郑军 <zhengjun1987@outlook.com>
+		Date:   Sat Jan 6 18:59:55 2018 +0800
+
+			Some changes
+
+		commit 3db6ccc69a1f54b6791d11c3b17cf152f1464d2f
+		Author: 郑军 <zhengjun1987@outlook.com>
+		Date:   Sat Jan 6 18:36:41 2018 +0800
+
+			Sample project imported
