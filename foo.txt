@@ -430,6 +430,63 @@
 
 12.使用push提交修改
 	修改原版本的文件并commit，然后push到bare共享版本库里面去
+	git commit --message "《Git学习指南》 第二章 入门 2018-01-06 20:32:43"
+	回显：
+			[master 46cc8c5] 《Git学习指南》 第二章 入门 2018-01-06 20:32:43
+			1 file changed, 174 insertions(+)
+	
+	commit成功，然后push到bare共享版本库
+	git push /Users/zhengjun/Desktop/GitProjects/first-steps-bare.git master
+	回显：
+			Counting objects: 3, done.
+			Delta compression using up to 4 threads.
+			Compressing objects: 100% (3/3), done.
+			Writing objects: 100% (3/3), 2.11 KiB | 2.11 MiB/s, done.
+			Total 3 (delta 2), reused 0 (delta 0)
+			To /Users/zhengjun/Desktop/GitProjects/first-steps-bare.git
+			   ec6e743..46cc8c5  master -> master
+
+13.从共享版本库里pull其他版本的更新内容
+	转到clone版本中去pull原版本的更新内容
+	先查看克隆版本的日志：
+									ec6e743 (HEAD -> master) Merge branch 'master' of /Users/zhengjun/Desktop/GitProjects/first-steps
+									fbbaf8f A change in the cloned repository
+									2d851fb (origin/master, origin/HEAD) 《Git学习指南》 第二章 入门 2018-01-06 19:26:11
+									26ff3b7 《Git学习指南》 第二章 入门 2018-01-06 19:06:22
+									91c78b1 Some changes
+									3db6ccc Sample project imported
+	
+	pull命令：git pull /Users/zhengjun/Desktop/GitProjects/first-steps-bare.git master
+	回显：
+				remote: Counting objects: 3, done.
+				remote: Compressing objects: 100% (3/3), done.
+				remote: Total 3 (delta 2), reused 0 (delta 0)
+				Unpacking objects: 100% (3/3), done.
+				From /Users/zhengjun/Desktop/GitProjects/first-steps-bare
+				 * branch            master     -> FETCH_HEAD
+				Updating ec6e743..46cc8c5
+				Fast-forward
+				 foo.txt | 174 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+				 1 file changed, 174 insertions(+)
+ 	
+ 	再看日志：
+				46cc8c5 (HEAD -> master) 《Git学习指南》 第二章 入门 2018-01-06 20:32:43                   //pull之后多了此项原版本之中的更新内容
+				ec6e743 Merge branch 'master' of /Users/zhengjun/Desktop/GitProjects/first-steps
+				fbbaf8f A change in the cloned repository
+				2d851fb (origin/master, origin/HEAD) 《Git学习指南》 第二章 入门 2018-01-06 19:26:11
+				26ff3b7 《Git学习指南》 第二章 入门 2018-01-06 19:06:22
+				91c78b1 Some changes
+				3db6ccc Sample project imported
+
+ 
+ 
+ 
+ 
+
+
+
+
+
 
 
 
