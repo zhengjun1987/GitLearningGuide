@@ -265,3 +265,177 @@
 								| | |____modules.xml
 								| | |____first-steps.iml
 
+9.修改原版本并commit，查看原版本log
+	git log --oneline
+	回显：
+		2d851fb (HEAD -> master) 《Git学习指南》 第二章 入门 2018-01-06 19:26:11
+		26ff3b7 《Git学习指南》 第二章 入门 2018-01-06 19:06:22
+		91c78b1 Some changes
+		3db6ccc Sample project imported
+		
+	再到克隆版本中查看log
+	git log --oneline
+	回显：
+		26ff3b7 (HEAD -> master, origin/master, origin/HEAD) 《Git学习指南》 第二章 入门 2018-01-06 19:06:22
+		91c78b1 Some changes
+		3db6ccc Sample project imported
+	
+	克隆版本比原版本少了一个commit,查看克隆版本的status：
+		On branch master
+		Your branch is up-to-date with 'origin/master'.
+
+		nothing to commit, working tree clean
+	
+	修改克隆版本里面的bar.html,并commit
+		zhengjuns-MacBook-Pro:first-steps-clone zhengjun$ git add bar.html
+		zhengjuns-MacBook-Pro:first-steps-clone zhengjun$ git commit --message "A change in the cloned repository"
+				[master fbbaf8f] A change in the cloned repository
+				 1 file changed, 1 insertion(+), 1 deletion(-)
+		zhengjuns-MacBook-Pro:first-steps-clone zhengjun$ git log --oneline
+				fbbaf8f (HEAD -> master) A change in the cloned repository
+				26ff3b7 (origin/master, origin/HEAD) 《Git学习指南》 第二章 入门 2018-01-06 19:06:22
+				91c78b1 Some changes
+				3db6ccc Sample project imported
+
+	现在两个版本各有一个未能同步的commit
+	
+	在克隆版本中pull
+	git pull
+	回显：
+			remote: Counting objects: 3, done.
+			remote: Compressing objects: 100% (3/3), done.
+			remote: Total 3 (delta 1), reused 0 (delta 0)
+			Unpacking objects: 100% (3/3), done.
+			From /Users/zhengjun/Desktop/GitProjects/first-steps
+			   26ff3b7..2d851fb  master     -> origin/master
+			Merge made by the 'recursive' strategy.
+			 foo.txt | 164 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+			 1 file changed, 163 insertions(+), 1 deletion(-)
+	
+	再看merge后的克隆版本的log：
+								ec6e743 (HEAD -> master) Merge branch 'master' of /Users/zhengjun/Desktop/GitProjects/first-steps
+								fbbaf8f A change in the cloned repository
+								2d851fb (origin/master, origin/HEAD) 《Git学习指南》 第二章 入门 2018-01-06 19:26:11
+								26ff3b7 《Git学习指南》 第二章 入门 2018-01-06 19:06:22
+								91c78b1 Some changes
+								3db6ccc Sample project imported
+	图形化的log
+	git log --graph
+								*   commit ec6e743aac9bfd61a66c93ea2154ddd295d1edf7 (HEAD -> master)
+								|\  Merge: fbbaf8f 2d851fb
+								| | Author: 郑军 <zhengjun1987@outlook.com>
+								| | Date:   Sat Jan 6 19:45:57 2018 +0800
+								| | 
+								| |     Merge branch 'master' of /Users/zhengjun/Desktop/GitProjects/first-steps
+								| |     
+								| |      especially if it merges an updated upstream into a topic branch.
+								| | 
+								| * commit 2d851fb0f8395e3ac2858e7400203bf8025e1c74 (origin/master, origin/HEAD)
+								| | Author: 郑军 <zhengjun1987@outlook.com>
+								| | Date:   Sat Jan 6 19:26:14 2018 +0800
+								| | 
+								| |     《Git学习指南》 第二章 入门 2018-01-06 19:26:11
+								| | 
+								* | commit fbbaf8fcb68a064ab89370f8710f66eebf6cf12e
+								|/  Author: 郑军 <zhengjun1987@outlook.com>
+								|   Date:   Sat Jan 6 19:42:43 2018 +0800
+								|   
+								|       A change in the cloned repository
+								| 
+								* commit 26ff3b72ba4498588332d6c26f507c2aa4e09d02
+								| Author: 郑军 <zhengjun1987@outlook.com>
+								| Date:   Sat Jan 6 19:06:24 2018 +0800
+								| 
+								|     《Git学习指南》 第二章 入门 2018-01-06 19:06:22
+								| 
+								* commit 91c78b15b0652e5e38c74e0b952b931cb6fa816e
+								| Author: 郑军 <zhengjun1987@outlook.com>
+								| Date:   Sat Jan 6 18:59:55 2018 +0800
+								| 
+								|     Some changes
+								| 
+								* commit 3db6ccc69a1f54b6791d11c3b17cf152f1464d2f
+								  Author: 郑军 <zhengjun1987@outlook.com>
+								  Date:   Sat Jan 6 18:36:41 2018 +0800
+  
+									  Sample project imported
+
+10.将克隆版本里的修改pull到原版本中去
+	git pull /Users/zhengjun/Desktop/GitProjects/first-steps-clone master
+	回显：
+			remote: Counting objects: 5, done.
+			remote: Compressing objects: 100% (4/4), done.
+			remote: Total 5 (delta 2), reused 0 (delta 0)
+			Unpacking objects: 100% (5/5), done.
+			From /Users/zhengjun/Desktop/GitProjects/first-steps-clone
+			 * branch            master     -> FETCH_HEAD
+			Updating 2d851fb..ec6e743
+			Fast-forward
+			 bar.html | 2 +-
+			 1 file changed, 1 insertion(+), 1 deletion(-)
+ 
+ 	现在再看原版本的log：
+									ec6e743 (HEAD -> master) Merge branch 'master' of /Users/zhengjun/Desktop/GitProjects/first-steps
+									fbbaf8f A change in the cloned repository
+									2d851fb 《Git学习指南》 第二章 入门 2018-01-06 19:26:11
+									26ff3b7 《Git学习指南》 第二章 入门 2018-01-06 19:06:22
+									91c78b1 Some changes
+									3db6ccc Sample project imported
+ 	图形化的log：
+						*   commit ec6e743aac9bfd61a66c93ea2154ddd295d1edf7 (HEAD -> master)
+						|\  Merge: fbbaf8f 2d851fb
+						| | Author: 郑军 <zhengjun1987@outlook.com>
+						| | Date:   Sat Jan 6 19:45:57 2018 +0800
+						| | 
+						| |     Merge branch 'master' of /Users/zhengjun/Desktop/GitProjects/first-steps
+						| |     
+						| |      especially if it merges an updated upstream into a topic branch.
+						| | 
+						| * commit 2d851fb0f8395e3ac2858e7400203bf8025e1c74
+						| | Author: 郑军 <zhengjun1987@outlook.com>
+						| | Date:   Sat Jan 6 19:26:14 2018 +0800
+						| | 
+						| |     《Git学习指南》 第二章 入门 2018-01-06 19:26:11
+						| | 
+						* | commit fbbaf8fcb68a064ab89370f8710f66eebf6cf12e
+						|/  Author: 郑军 <zhengjun1987@outlook.com>
+						|   Date:   Sat Jan 6 19:42:43 2018 +0800
+						|   
+						|       A change in the cloned repository
+						| 
+						* commit 26ff3b72ba4498588332d6c26f507c2aa4e09d02
+						| Author: 郑军 <zhengjun1987@outlook.com>
+						| Date:   Sat Jan 6 19:06:24 2018 +0800
+						| 
+						|     《Git学习指南》 第二章 入门 2018-01-06 19:06:22
+						| 
+						* commit 91c78b15b0652e5e38c74e0b952b931cb6fa816e
+						| Author: 郑军 <zhengjun1987@outlook.com>
+						| Date:   Sat Jan 6 18:59:55 2018 +0800
+						| 
+						|     Some changes
+						| 
+						* commit 3db6ccc69a1f54b6791d11c3b17cf152f1464d2f
+						  Author: 郑军 <zhengjun1987@outlook.com>
+						  Date:   Sat Jan 6 18:36:41 2018 +0800
+  
+							  Sample project imported
+      
+11.创建公共push共享版本库
+	git clone --bare /Users/zhengjun/Desktop/GitProjects/first-steps /Users/zhengjun/Desktop/GitProjects/first-steps-bare.git
+	回显：
+			Cloning into bare repository '/Users/zhengjun/Desktop/GitProjects/first-steps-bare.git'...
+			done.
+	此时GitProjects目录下多了一个first-steps-bare.git路径，该路径无法用于工作
+
+12.使用push提交修改
+	修改原版本的文件并commit，然后push到bare共享版本库里面去
+
+
+
+
+
+
+
+
+ 
