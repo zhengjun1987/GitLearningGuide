@@ -1,0 +1,69 @@
+1.查看工作空间当前状态
+	git status
+	git status --short
+	
+	git status
+	回显：
+			On branch master
+			Untracked files:
+			  (use "git add <file>..." to include in what will be committed)
+
+				chapter04.txt
+				"\345\270\270\347\224\250\350\267\257\345\276\204.txt"
+
+			nothing added to commit but untracked files present (use "git add" to track)
+	git status --short
+	回显：
+			?? chapter04.txt
+			?? "\345\270\270\347\224\250\350\267\257\345\276\204.txt"
+	
+	git add chapter04.txt 之后：
+	git status
+	回显：
+				On branch master
+				Changes to be committed:
+				  (use "git reset HEAD <file>..." to unstage)
+
+					new file:   chapter04.txt
+
+				Untracked files:
+				  (use "git add <file>..." to include in what will be committed)
+
+					"\345\270\270\347\224\250\350\267\257\345\276\204.txt"
+	git status --short
+	回显：
+			A  chapter04.txt
+			?? "\345\270\270\347\224\250\350\267\257\345\276\204.txt"
+	很显然 A与？？分别代表不同的状态
+
+2.搜集相关修改准备提交,添加文件和路径到暂存区
+	git add fileName.fmt //添加文件
+	git add dir/	//添加路径以及该路径下的所有文件路径
+	git add.		//添加当前路径下所有的文件路径
+	
+3.创建提交
+	git commit
+	git commit --message "提交内容描述"
+
+4.暂存区在做什么
+	git diff		//staging vs. workspace
+	git diff --staged //staging vs. repository
+	回显：
+			diff --git a/chapter04.txt b/chapter04.txt
+			new file mode 100644
+			index 0000000..b2f2468
+			--- /dev/null
+			+++ b/chapter04.txt
+			@@ -0,0 +1,6 @@
+			+1.查看工作空间当前状态
+			+       git status
+			+       git status --short
+			+       
+			+       git status
+			+       回显：
+			\ No newline at end of file
+
+
+
+
+
