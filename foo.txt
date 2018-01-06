@@ -103,3 +103,165 @@
 		Date:   Sat Jan 6 18:36:41 2018 +0800
 
 			Sample project imported
+			
+8.模拟另一位开发者克隆整个项目
+	git clone /Users/zhengjun/Desktop/GitProjects/first-steps /Users/zhengjun/Desktop/GitProjects/first-steps-clone
+	回显：
+		Cloning into '/Users/zhengjun/Desktop/GitProjects/first-steps-clone'...
+		done.
+		
+	查看文件目录结构：
+								|____.DS_Store
+								|____first-steps-clone
+								| |____.DS_Store
+								| |____bar.html
+								| |____foo.txt
+								| |____.git
+								| | |____config
+								| | |____objects
+								| | | |____50
+								| | | | |____08ddfcf53c02e82d7eee2e57c38e5672ef89f6
+								| | | |____35
+								| | | | |____eb1ddfbbc029bcab630581847471d7f238ec53
+								| | | |____3d
+								| | | | |____b6ccc69a1f54b6791d11c3b17cf152f1464d2f
+								| | | | |____6c952048a52029766aa63d36ec69886a886767
+								| | | |____d6
+								| | | | |____ebd4805981b8400db3e3291c74a743fef9a824
+								| | | |____ca
+								| | | | |____60c9fd9f016169d790fe0099030a0018691bdb
+								| | | |____ed
+								| | | | |____4b90acd1ef0e24e9fa1dcee8d002788613b544
+								| | | |____pack
+								| | | |____87
+								| | | | |____f25359eb294680baac6fa31ba7435130ff4de2
+								| | | |____26
+								| | | | |____ff3b72ba4498588332d6c26f507c2aa4e09d02
+								| | | |____44
+								| | | | |____3f8efc31573bf249ee09b5cb5733f6edcccadf
+								| | | |____info
+								| | | |____91
+								| | | | |____c78b15b0652e5e38c74e0b952b931cb6fa816e
+								| | | |____37
+								| | | | |____9ba2f376aacb06a2acbda0c424dda904223a08
+								| | | |____ea
+								| | | | |____b9174651fbcf66673b812007ef2a27e746ebf2
+								| | | |____f0
+								| | | | |____3c17bf7927d9c2e43ad2af689a9132a5a920b4
+								| | | |____f7
+								| | | | |____445fc63b3314089cdb409c4a8cd64e7f857ae4
+								| | | |____49
+								| | | | |____057d5d5b3ae8a4d048a55c3aa866ff32b4fa36
+								| | | |____8e
+								| | | | |____4323f2650077a5e377fd1425e83647f1b58290
+								| | |____HEAD
+								| | |____info
+								| | | |____exclude
+								| | |____logs
+								| | | |____HEAD
+								| | | |____refs
+								| | | | |____heads
+								| | | | | |____master
+								| | | | |____remotes
+								| | | | | |____origin
+								| | | | | | |____HEAD
+								| | |____description
+								| | |____hooks
+								| | | |____commit-msg.sample
+								| | | |____pre-rebase.sample
+								| | | |____pre-commit.sample
+								| | | |____applypatch-msg.sample
+								| | | |____pre-receive.sample
+								| | | |____prepare-commit-msg.sample
+								| | | |____post-update.sample
+								| | | |____pre-applypatch.sample
+								| | | |____pre-push.sample
+								| | | |____update.sample
+								| | |____refs
+								| | | |____heads
+								| | | | |____master
+								| | | |____tags
+								| | | |____remotes
+								| | | | |____origin
+								| | | | | |____HEAD
+								| | |____index
+								| | |____packed-refs
+								| |____.idea
+								| | |____vcs.xml
+								| | |____workspace.xml
+								| | |____modules.xml
+								| | |____first-steps.iml
+								|____first-steps
+								| |____.DS_Store
+								| |____bar.html
+								| |____foo.txt
+								| |____.git
+								| | |____config
+								| | |____objects
+								| | | |____50
+								| | | | |____08ddfcf53c02e82d7eee2e57c38e5672ef89f6
+								| | | |____35
+								| | | | |____eb1ddfbbc029bcab630581847471d7f238ec53
+								| | | |____3d
+								| | | | |____b6ccc69a1f54b6791d11c3b17cf152f1464d2f
+								| | | | |____6c952048a52029766aa63d36ec69886a886767
+								| | | |____d6
+								| | | | |____ebd4805981b8400db3e3291c74a743fef9a824
+								| | | |____ca
+								| | | | |____60c9fd9f016169d790fe0099030a0018691bdb
+								| | | |____ed
+								| | | | |____4b90acd1ef0e24e9fa1dcee8d002788613b544
+								| | | |____pack
+								| | | |____87
+								| | | | |____f25359eb294680baac6fa31ba7435130ff4de2
+								| | | |____26
+								| | | | |____ff3b72ba4498588332d6c26f507c2aa4e09d02
+								| | | |____44
+								| | | | |____3f8efc31573bf249ee09b5cb5733f6edcccadf
+								| | | |____info
+								| | | |____91
+								| | | | |____c78b15b0652e5e38c74e0b952b931cb6fa816e
+								| | | |____37
+								| | | | |____9ba2f376aacb06a2acbda0c424dda904223a08
+								| | | |____ea
+								| | | | |____b9174651fbcf66673b812007ef2a27e746ebf2
+								| | | |____f0
+								| | | | |____3c17bf7927d9c2e43ad2af689a9132a5a920b4
+								| | | |____f7
+								| | | | |____445fc63b3314089cdb409c4a8cd64e7f857ae4
+								| | | |____49
+								| | | | |____057d5d5b3ae8a4d048a55c3aa866ff32b4fa36
+								| | | |____8e
+								| | | | |____4323f2650077a5e377fd1425e83647f1b58290
+								| | |____HEAD
+								| | |____info
+								| | | |____exclude
+								| | |____logs
+								| | | |____HEAD
+								| | | |____refs
+								| | | | |____heads
+								| | | | | |____master
+								| | |____description
+								| | |____hooks
+								| | | |____commit-msg.sample
+								| | | |____pre-rebase.sample
+								| | | |____pre-commit.sample
+								| | | |____applypatch-msg.sample
+								| | | |____pre-receive.sample
+								| | | |____prepare-commit-msg.sample
+								| | | |____post-update.sample
+								| | | |____pre-applypatch.sample
+								| | | |____pre-push.sample
+								| | | |____update.sample
+								| | |____refs
+								| | | |____heads
+								| | | | |____master
+								| | | |____tags
+								| | |____index
+								| | |____COMMIT_EDITMSG
+								| |____.idea
+								| | |____vcs.xml
+								| | |____workspace.xml
+								| | |____modules.xml
+								| | |____first-steps.iml
+
