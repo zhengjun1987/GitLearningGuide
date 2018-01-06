@@ -1,0 +1,162 @@
+commit 5a4f8fbbab3c21f133ec42d9e2273231fa0ff71a (HEAD -> master, origin/master)
+Author: 郑军 <zhengjun1987@139.com>
+Date:   Sat Jan 6 20:30:43 2018 +0800
+
+    Update README.md
+
+commit 8e5bbb41ab9fc783547c5a18477676fa4ee95a5f
+Author: 郑军 <zhengjun1987@139.com>
+Date:   Sat Jan 6 20:29:59 2018 +0800
+
+    Update README.md
+
+commit c9f03c5cbb9053c87ab3c4fbbcd59bee789d4787
+Author: 郑军 <zhengjun1987@139.com>
+Date:   Sat Jan 6 20:24:56 2018 +0800
+
+    Update README.md
+
+commit 2ac23e1f32fbaa1fb694dd21c889170b5fb8f3a4
+Author: 郑军 <zhengjun1987@outlook.com>
+Date:   Sat Jan 6 16:31:55 2018 +0800
+
+    Head First设计模式 第十二章 复合模式 2018-01-06 16:31:46
+
+commit dc5036f0c334d8b296dd628f199a0d2aa00459f9
+Author: zhengjun1987hz <zhengjun1987@outlook.com>
+Date:   Fri Jan 5 18:18:16 2018 +0800
+
+    《Head First Design Patterns》 第十二章 复合模式MVC 2018-1-5 18:18:08
+
+commit ea333700798f596e4e8021b68fde8ca2f326a939
+Author: zhengjun1987hz <zhengjun1987@outlook.com>
+Date:   Fri Jan 5 14:56:10 2018 +0800
+
+    《Head First Design Patterns》 第十一章 代理模式 2018-1-5 14:56:01
+
+commit edde822b331f8941c38661fdb5bc3b5bed48501e
+Author: zhengjun1987hz <zhengjun1987@outlook.com>
+Date:   Fri Jan 5 09:25:15 2018 +0800
+
+    《Head First Design Patterns》 第十章 状态模式 2018-1-5 09:25:03
+
+commit 7a8ec93f15b463cf91a310ff9fc86677dd665766
+Author: zhengjun1987hz <zhengjun1987@outlook.com>
+Date:   Thu Jan 4 18:33:17 2018 +0800
+
+    《Head First Design Patterns》 第十章 状态模式 2018年1月4日18:33:07
+
+commit 6ac90fc93bcfde73c8e60bec0e4b51ad85fa50f6
+Author: zhengjun1987hz <zhengjun1987@outlook.com>
+Date:   Thu Jan 4 11:55:01 2018 +0800
+
+    《Head First Design Patterns》 第九章 迭代器与组件模式 2018-1-4 11:54:49
+
+commit 315910680fb27e63b06cdb1aa4dc0934abb61f39
+Author: zhengjun1987hz <zhengjun1987@outlook.com>
+Date:   Wed Jan 3 18:14:21 2018 +0800
+
+    《Head First Design Patterns》 第九章 迭代器与组合模式 2018-1-3 18:14:11
+
+commit 12a846b6bfb6b04c821f005a27fe2cad99b63c79
+Author: 郑军 <zhengjun1987@139.com>
+Date:   Fri Dec 29 22:10:42 2017 +0800
+
+    Update README.md
+
+commit 56cd8a7e3d9cf01badc41c60b633963e26736e29
+Author: zhengjun1987hz <zhengjun1987@outlook.com>
+Date:   Fri Dec 29 18:07:15 2017 +0800
+
+    《Head First Design Patterns》 第九章 迭代器与组合模式 2017-12-29 18:07:06
+
+commit 52512807cf1f8457af4b23107f6b343f9ab4d2ea
+Author: zhengjun1987hz <zhengjun1987@outlook.com>
+Date:   Thu Dec 28 17:48:51 2017 +0800
+
+    《Head First Design Patterns》 第八章 模板方法模式 2017-12-28 17:45:18
+
+commit d12c38e635d142e70c20bdc520dabb116b18ee72
+Author: zhengjun1987hz <zhengjun1987@outlook.com>
+Date:   Thu Dec 28 17:45:26 2017 +0800
+
+    《Head First Design Patterns》 第八章 模板方法模式 2017-12-28 17:45:18
+
+commit 23342b8cae5071260cff5f3a3f491334dbd11885
+Author: zhengjun1987hz <zhengjun1987@outlook.com>
+Date:   Thu Dec 28 14:40:25 2017 +0800
+
+    《Head First Design Patterns》 第七章 适配器模式 2017-12-27 18:22:242017-12-28 14:40:19
+
+commit 1e86bfd6b1b8e56c6d66146fed6539c6fb91ac4b
+Author: zhengjun1987hz <zhengjun1987@outlook.com>
+Date:   Thu Dec 28 14:23:08 2017 +0800
+
+    《Head First Design Patterns》 清理工具类 2017-12-27 18:22:24
+
+commit 36f825b2e7780fae0106e8414e0b577d4da6855d
+Author: zhengjun1987hz <zhengjun1987@outlook.com>
+Date:   Wed Dec 27 18:22:31 2017 +0800
+
+    《Head First Design Patterns》 第七章 适配器模式 2017-12-27 18:22:24
+
+commit eec19a6cf09bd85a087df3aafd14480d9bbfb01e
+Author: zhengjun1987hz <zhengjun1987@outlook.com>
+Date:   Wed Dec 27 16:49:49 2017 +0800
+
+    《Head First Design Patterns》 第六章 命令模式 2017-12-27 16:49:38
+
+commit 2c7fbd4ddb25bfbe8a1890400ee9f29bd7200d56
+Author: 郑军 <zhengjun1987@outlook.com>
+Date:   Tue Dec 26 18:02:53 2017 +0800
+
+    Head First设计模式 第五章 单例模式 2017-12-26 18:02:42
+
+commit 76b1d62e0062127d585bf57c86f3bec9f363b82e
+Merge: 6cb5919 963d4c1
+Author: 郑军 <zhengjun1987@outlook.com>
+Date:   Mon Dec 25 19:33:10 2017 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 6cb5919dc2f31c7c20a1bb8fff2dcbac03526064
+Author: 郑军 <zhengjun1987@outlook.com>
+Date:   Mon Dec 25 19:29:08 2017 +0800
+
+    《Head First设计模式》第三章 装饰模式 2017-12-25 19:27:50
+
+commit 963d4c139fff1b5ddc375ef8680e02050b32a164
+Author: zhengjun1987hz <zhengjun1987@outlook.com>
+Date:   Mon Dec 25 18:14:28 2017 +0800
+
+    《Head First Design Patterns》 第五章 单例模式 2017-12-25 17:08:50
+
+commit f9a110b105cf84ef2cfd75b2bce6bd4cd4ef025f
+Author: zhengjun1987hz <zhengjun1987@outlook.com>
+Date:   Mon Dec 25 17:08:58 2017 +0800
+
+    《Head First Design Patterns》 第四章 工厂模式和抽象工厂模式 2017-12-25 17:08:50
+
+commit 0ef5de248c442f8e80c565f240fb8b5754dc64d5
+Author: zhengjun1987hz <zhengjun1987@outlook.com>
+Date:   Mon Dec 25 11:25:17 2017 +0800
+
+    《Head First Design Patterns》 第三章 2017-12-25 11:25:06
+
+commit f16a900f9d053a9b2d8bf83054ffab1ef20cbec4
+Author: 郑军 <zhengjun1987@outlook.com>
+Date:   Fri Dec 22 01:56:23 2017 +0800
+
+    《Head First设计模式》读书代码同步 2017-12-22 01:56:10
+
+commit 4c6c13ef6ce98fcdaa6618162c29d1a4f9955ab0
+Author: 郑军 <zhengjun1987@139.com>
+Date:   Thu Dec 21 18:21:30 2017 +0800
+
+    Create README.md
+
+commit 3693f838b0ac7e7dc2b071e545da2a69ec4e020a
+Author: 郑军 <zhengjun1987@outlook.com>
+Date:   Thu Dec 21 01:53:58 2017 +0800
+
+    设计模式 第一章 2017-12-21 01:53:54
