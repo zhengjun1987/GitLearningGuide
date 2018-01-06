@@ -3,4 +3,11 @@
 	Initialized empty Git repository in /Users/zhengjun/Desktop/GitProjects/first-steps/.git/
 2.提交项目文件foo.txt和bar.txt
 	 git add foo.txt bar.txt
+	 git commit --message "Sample project imported"
 	 
+	 [master (root-commit) 3db6ccc] Sample project imported
+ 	2 files changed, 7 insertions(+)
+ 	create mode 100644 bar.txt
+ 	create mode 100644 foo.txt
+ 	
+ 	返回内容中的3db6ccc即本次commit的散列值（提交的版本号）
