@@ -11,3 +11,66 @@
 	git diff 散列值^!
 	git diff 散列值 散列值  - 文件路径 //限制文件范围
 	git diff --stat 散列值 散列值  //显示每个文件的修改数量
+	
+	 git diff 847ae1b^!
+								diff --git a/chapter03.txt b/chapter03.txt
+								new file mode 100644
+								index 0000000..0ab19d8
+								--- /dev/null
+								+++ b/chapter03.txt
+								@@ -0,0 +1,13 @@
+								+1.检查散列值的正确性
+								+       git fsck
+								+       回显：
+								+                       Checking object directories: 100% (256/256), done.
+								+       
+								+2.恢复到某次提交的时刻（有机会再尝试）
+								+       git checkout 散列值
+								+       
+								+3.查看两次提交之间的比较
+								+       git diff 散列值 散列值
+								+       git diff 散列值^!
+								+       git diff 散列值 散列值  - 文件路径 //限制文件范围
+								+       git diff --stat 散列值 散列值  //显示每个文件的修改数量
+								\ No newline at end of file
+
+	git diff --stat 847ae1b^!
+										 chapter03.txt | 13 +++++++++++++
+										 1 file changed, 13 insertions(+)
+
+	git push https://github.com/zhengjun1987hz/GitLearningGuide.git master
+	回显：
+			Counting objects: 5, done.
+			Delta compression using up to 4 threads.
+			Compressing objects: 100% (5/5), done.
+			Writing objects: 100% (5/5), 868 bytes | 868.00 KiB/s, done.
+			Total 5 (delta 2), reused 0 (delta 0)
+			remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+			To https://github.com/zhengjun1987hz/GitLearningGuide.git
+			   112d1ba..efe0870  master -> master
+
+4.查看提交日志
+	git log	//显示全部提交历史，详细内容
+	
+	git log -n  3  //只显示最近3次提交
+	
+	git log --oneline	//每次提交只显示一行精简内容
+	git log --graph		//显示图形化的日至历史
+	git log --stat	//只显示统计数据
+	
+	git log -n 5 --oneline
+	回显：
+			efe0870 (HEAD -> master) 《Git学习指南》 第三章 提交 2018-01-06 23:56:46
+			847ae1b 《Git学习指南》 第三章 提交 2018-01-06 23:45:21
+			112d1ba 《Git学习指南》 第二章 入门 2018-01-06 21:30:49
+			ccae959 《Git学习指南》 第二章 入门 2018-01-06 21:29:22
+			0c1c473 《Git学习指南》 第二章 入门 2018-01-06 20:57:32
+	
+
+
+
+
+
+
+
+
