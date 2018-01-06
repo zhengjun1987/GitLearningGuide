@@ -1,0 +1,6 @@
+1.使用命令行到指定项目文件路径，
+	git init 命令初始化项目，创建版本库。创建成功后会有隐藏的.git目录在项目路径下生成。
+	Initialized empty Git repository in /Users/zhengjun/Desktop/GitProjects/first-steps/.git/
+2.提交项目文件foo.txt和bar.txt
+	 git add foo.txt bar.txt
+	 
