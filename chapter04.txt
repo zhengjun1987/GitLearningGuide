@@ -46,8 +46,8 @@
 	git commit --message "提交内容描述"
 
 4.暂存区在做什么
-	git diff		//staging vs. workspace
-	git diff --staged //staging vs. repository
+	git diff		//staging vs. workspace 工作空间中已修改但未能add到暂存区的
+	git diff --staged //staging vs. repository已经add到暂存区但未能commit的
 	回显：
 			diff --git a/chapter04.txt b/chapter04.txt
 			new file mode 100644
@@ -62,6 +62,18 @@
 			+       git status
 			+       回显：
 			\ No newline at end of file
+
+5.从暂存区撤回修改内容
+	git reset HEAD .
+	git reset HEAD fileName.fmt /src/dir/
+	
+	连续两个操作：第一步从暂存区撤回所有已暂存修改内容，第二步重新查询当前项目状态
+	192:first-steps zhengjun$ git reset HEAD .
+	192:first-steps zhengjun$ git status --short
+	回显：
+			?? chapter04.txt
+			?? "\345\270\270\347\224\250\350\267\257\345\276\204.txt"
+
 
 
 
