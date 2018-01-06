@@ -1,0 +1,13 @@
+1.检查散列值的正确性
+	git fsck
+	回显：
+			Checking object directories: 100% (256/256), done.
+	
+2.恢复到某次提交的时刻（有机会再尝试）
+	git checkout 散列值
+	
+3.查看两次提交之间的比较
+	git diff 散列值 散列值
+	git diff 散列值^!
+	git diff 散列值 散列值  - 文件路径 //限制文件范围
+	git diff --stat 散列值 散列值  //显示每个文件的修改数量
