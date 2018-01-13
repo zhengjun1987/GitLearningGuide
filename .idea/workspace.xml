@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="89dc7716-9ee0-4251-be66-c059ad595ceb" name="Default" comment="">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <change beforePath="" afterPath="$PROJECT_DIR$/常用路径.txt" />
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -29,15 +32,21 @@
         </entry>
       </file>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <file leaf-file-name="chapter04.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chapter04.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-833">
 =======
+=======
+>>>>>>> Stashed changes
       <file leaf-file-name="chapter04.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chapter04.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-838">
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
@@ -45,6 +54,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
       <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
@@ -56,6 +66,8 @@
           </provider>
         </entry>
       </file>
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     </leaf>
@@ -281,7 +293,11 @@
     <entry file="file://$PROJECT_DIR$/chapter04.txt">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         <state relative-caret-position="-833">
+=======
+        <state relative-caret-position="-838">
+>>>>>>> Stashed changes
 =======
         <state relative-caret-position="-838">
 >>>>>>> Stashed changes
@@ -291,6 +307,7 @@
       </provider>
     </entry>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
@@ -299,6 +316,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
   </component>

@@ -1,0 +1,14 @@
+1.git hash-object
+	Git的核心是一个可用来存储文本和二进制数据的对象数据库，一个非常高效的实现
+	git hash-object -w chapter05.txt 
+			回显：d308f546c4689b497df541873a69c606c670bd6b
+	git cat-file -p d308f546
+			回显：1.git hash-object
+							Git的核心是一个可用来存储文本和二进制数据的对象数据库
+
+2.内容相同的文件的散列值是相同的(相同内容的数据只会存储一份)
+	zhengjuns-MacBook-Pro:first-steps zhengjun$ git hash-object -w 常用路径.txt 
+	2feea5e44518c268960e3288bb1aa9ffb3af84ab
+	zhengjuns-MacBook-Pro:first-steps zhengjun$ git hash-object -w 常用路径的副本.txt 
+	2feea5e44518c268960e3288bb1aa9ffb3af84ab
+	
