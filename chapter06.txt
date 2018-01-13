@@ -5,4 +5,59 @@
 
 2.创建分支
 	git branch branch-name
+	
+	git branch branch_chapter06
+	回车键后无回显，然后查询分支列表
+	git branch
 	回显：
+			  branch_chapter06
+			* master
+
+3.由历史commit创建分支
+	git branch branch_name 历史commit的散列值
+	
+	git branch historical_branch_4c5469d 4c5469d
+	回车键后无回显，然后查询分支列表
+	git branch
+	回显：
+			  branch_chapter06
+			  historical_branch_4c5469d
+			* master
+
+4.切换到新的分支
+	git checkout branch_name
+	
+	git checkout historical_branch_4c5469d
+	回显：
+			Switched to branch 'historical_branch_4c5469d'
+	此时再git branch
+	回显：
+			  branch_chapter06
+			* historical_branch_4c5469d
+			  master
+
+5.创建并切换到新的分支（前两步骤的合并执行）
+	git checkout -b branch_name
+	
+	git checkout -b branch_fast_build_switch
+	回显：
+			Switched to a new branch 'branch_fast_build_switch'
+	此时再git branch
+	回显：
+			  branch_chapter06
+			* branch_fast_build_switch
+			  historical_branch_4c5469d
+			  master
+	
+6.checkout命令被拒绝时候的处理办法
+	a.提交修改后切换				git commit
+	b.放弃此部分修改后切换		git checkout --force target_branch_name
+	c.储存修改内容后切换			git stash
+
+
+
+
+
+
+
+
