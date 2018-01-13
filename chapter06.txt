@@ -54,10 +54,57 @@
 	b.放弃此部分修改后切换		git checkout --force target_branch_name
 	c.储存修改内容后切换			git stash
 
+7.重置分支指针
+	git reset --hard commit的散列值
+	执行之后指针重置到了commit的活动分支上，覆盖当前工作区、暂存区所有修改——所以重置分支指针之前最好stash缓存一下当前的修改内容
+	
+	跑了一遍，异常神奇！！！Fucking amazing！！！(ﾟДﾟ≡ﾟДﾟ)
+	
+8.删除分支
+	删除一个打开的分支：git branch -D branch_name
+	删除一个已经被终止的分支：git branch -d branch_name
+	
+9.恢复已被删除的分支
+	git branch branch_name 已知的commit散列值 		//等同于重新创建分支
+	
+	查询散列值的方法：
+	git reflog
+	回显：
+			76e1a02 (HEAD -> master) HEAD@{0}: reset: moving to 76e1a02
+			c7d5e5b (branch_fast_build_switch, branch_chapter06) HEAD@{1}: reset: moving to c7d5e5b
+			76e1a02 (HEAD -> master) HEAD@{2}: reset: moving to HEAD
+			76e1a02 (HEAD -> master) HEAD@{3}: checkout: moving from master to master
+			76e1a02 (HEAD -> master) HEAD@{4}: commit: 《Git学习指南》 第六章 分支 2018-01-13 16:01:03
+			c7d5e5b (branch_fast_build_switch, branch_chapter06) HEAD@{5}: checkout: moving from branch_fast_build_switch to master
+			c7d5e5b (branch_fast_build_switch, branch_chapter06) HEAD@{6}: checkout: moving from master to branch_fast_build_switch
+			c7d5e5b (branch_fast_build_switch, branch_chapter06) HEAD@{7}: checkout: moving from historical_branch_4c5469d to master
+			4c5469d (historical_branch_4c5469d) HEAD@{8}: checkout: moving from master to historical_branch_4c5469d
+			c7d5e5b (branch_fast_build_switch, branch_chapter06) HEAD@{9}: commit: 《Git学习指南》 第六章 分支 2018-01-13 15:39:29
+			3a50399 HEAD@{10}: commit: 《Git学习指南》 第四章 多次提交 2018-01-07 02:09:32
+			4c5469d (historical_branch_4c5469d) HEAD@{11}: commit: 《Git学习指南》 第四章 多次提交 2018-01-07 02:09:32
+			0bc81f9 HEAD@{12}: commit: 《Git学习指南》 第四章 多次提交 2018-01-07 02:09:32
+			7349f0e HEAD@{13}: commit: 《Git学习指南》 第四章 提交 2018-01-07 01:54:20
+			d5321f7 HEAD@{14}: reset: moving to HEAD
+			d5321f7 HEAD@{15}: commit: 《Git学习指南》 第四章 2018-01-07 01:43:30
+			d0852ca HEAD@{16}: commit: 《Git学习指南》 第四章 2018-01-07 01:41:29
+			aba7799 HEAD@{17}: commit: 《Git学习指南》 第三章 提交 2018-01-07 00:32:17
+			efe0870 HEAD@{18}: commit: 《Git学习指南》 第三章 提交 2018-01-06 23:56:46
+			847ae1b HEAD@{19}: commit: 《Git学习指南》 第三章 提交 2018-01-06 23:45:21
+			112d1ba HEAD@{20}: commit: 《Git学习指南》 第二章 入门 2018-01-06 21:30:49
+			ccae959 HEAD@{21}: commit: 《Git学习指南》 第二章 入门 2018-01-06 21:29:22
+			0c1c473 HEAD@{22}: commit: 《Git学习指南》 第二章 入门 2018-01-06 20:57:32
+			a82d74f HEAD@{23}: commit: 《Git学习指南》 第二章 入门 2018-01-06 20:51:58
+			46cc8c5 HEAD@{24}: commit: 《Git学习指南》 第二章 入门 2018-01-06 20:32:43
+			ec6e743 HEAD@{25}: pull /Users/zhengjun/Desktop/GitProjects/first-steps-clone master: Fast-forward
+			2d851fb HEAD@{26}: commit: 《Git学习指南》 第二章 入门 2018-01-06 19:26:11
+			26ff3b7 HEAD@{27}: commit: 《Git学习指南》 第二章 入门 2018-01-06 19:06:22
+			91c78b1 HEAD@{28}: commit: Some changes
+			3db6ccc HEAD@{29}: commit (initial): Sample project imported
+	
 
-
-
-
+10.清理提交对象
+		git gc
+		移除所有不属于当前分支的提交对象
 
 
 
