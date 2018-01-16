@@ -1,0 +1,14 @@
+1.rebase的原理:
+	并非移动相关commit,而是在新的基础上发起一系列
+
+2.避免钻石链
+	构成rebase的条件:
+	git branch
+	回显:
+			* br_rebase
+			master
+	
+	在br_rebase分支上做出修改并提交:
+			对commitlog第一行做出修改
+			保存chapter08.txt
+	
