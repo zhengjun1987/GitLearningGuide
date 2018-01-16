@@ -1,3 +1,0 @@
-常用路径
-本地路径：/Users/zhengjun/Desktop/GitProjects/first-steps
-GitHub代码库：https://github.com/zhengjun1987hz/GitLearningGuide.git
