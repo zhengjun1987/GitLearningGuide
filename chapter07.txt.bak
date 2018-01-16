@@ -63,5 +63,3 @@
 	
 				 especially if it merges an updated upstream into a topic branch.
 
-6.棘手的合并冲突
-	git log branch_a..branch_b  显示分支b中与分支a无关的commit日志
