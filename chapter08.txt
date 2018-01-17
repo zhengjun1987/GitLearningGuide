@@ -12,3 +12,59 @@
 			对commitlog第一行做出修改
 			保存chapter08.txt
 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7.捡取cherry-pick
+		git log -4 --oneline
+		82cd11d (HEAD -> master) Android权威编程 第三章 Activity的生命周期 2018-1-17 15:30:57
+		717a587 《Android编程权威指南》第二版 第二章 Android与MVC设计模式 2018-1-17 11:58:29
+		86ff98d (origin/master) 《Android编程权威指南》第二版 第一章 2018-1-12 17:48:24
+
+		git checkout cherry
+		Switched to branch 'cherry'
+
+		git log -4 --oneline
+		93558b6 (HEAD -> cherry) Android权威编程 第二版 第二章 Androi和MVC设计模式 2018-1-17 14:43:06
+		717a587 《Android编程权威指南》第二版 第二章 Android与MVC设计模式 2018-1-17 11:58:29
+		86ff98d (origin/master) 《Android编程权威指南》第二版 第一章 2018-1-12 17:48:24
+
+		git checkout master
+		Switched to branch 'master'
+		Your branch is ahead of 'origin/master' by 2 commits.
+		(use "git push" to publish your local commits)
+
+		git cherry-pick 93558b6
+		[master b55bbba] Android权威编程 第二版 第二章 Android和MVC设计模式 2018-1-17 14:43:06
+		Date: Wed Jan 17 14:43:13 2018 +0800
+		5 files changed, 31 insertions(+), 4 deletions(-)
+		create mode 100644 app/src/main/res/mipmap-hdpi/arrow_left.png
+		create mode 100644 app/src/main/res/mipmap-hdpi/arrow_right.png
+
+
+		git log -4 --oneline
+		b55bbba (HEAD -> master) Android权威编程 第二版 第二章 Android和MVC设计模式 2018-1-17 14:43:06
+		82cd11d  Android权威编程 第三章 Activity的生命周期 2018-1-17 15:30:57
+		717a587 《Android编程权威指南》第二版 第二章 Android与MVC设计模式 2018-1-17 11:58:29
+		86ff98d (origin/master) 《Android编程权威指南》第二版 第一章 2018-1-12 17:48:24
+
+可以看得出来,捡取操作之后git在操作分支上自动创建了一个新的commit
+效果类似于merge,只不过对象是单独的一个commit
+捡取操作的适用范围:
+	1.cherry-pick不会参考历史内容
+	2.适用于将一些小bug的修复传递到各个不同分支之中
+	3.适用于从即将删除的分支中转移出有用的commit
+	有可能会引发重复提交问题
